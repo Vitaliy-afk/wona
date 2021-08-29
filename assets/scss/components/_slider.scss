@@ -1,0 +1,71 @@
+.slider-block {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    z-index: 100;
+    top: 0px;
+    &__item {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 810px;
+        @include media ('<1024px'){
+            height: 320px;
+        }
+    }
+}
+
+.slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.slider .slick-dots li {
+    list-style-type: none;
+    margin: 0px 16px;
+}
+
+.slider .slick-dots button {
+    position: absolute;
+    width: 10.43px;
+    height: 10.43px;
+    border-radius: 30px;
+    font-size: 0;
+    border: 1px solid $white;
+    bottom: 3%;
+    &:hover {
+        background: #FF61E6;
+    }
+}
+
+
+.slider .row.slick-dots {
+    display: flex;
+}
+
+.slider .slider__item-card {
+    color: white;
+}
+
+
+.slider__item-card {
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    max-width: 100%;
+}
+
+
+.slider button.slick-prev.slick-arrow {
+    outline: none;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+

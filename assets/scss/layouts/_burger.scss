@@ -1,0 +1,80 @@
+.burger-wrap {
+	padding: 41px 20px 0 0;
+    text-align: center;
+    display: inline-block;
+    z-index: 1001;
+	@include media('<=640px'){
+		display: inline-block;
+		visibility: visible;
+		top: 0;
+		right: 0;
+		padding: 16px 5px 5px 5px;
+	}
+}
+
+
+
+.burger {
+	display: inline-block;
+	$width: 34px;
+	$thickness: 3px;
+	border: 0;
+	background: none;
+	outline: 0;
+	color: rgb(255, 255, 255);
+	padding: 0;
+	cursor: pointer;
+	border-bottom: $thickness solid currentColor;
+	width: $width;
+	transition: border-bottom 1s ease-in-out;
+	&:-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	&:before {
+		content: "";
+		display: block;
+		border-bottom: $thickness solid currentColor;
+		width: 100%;
+		margin-bottom: 10px;
+		transition: transform 0.5s ease-in-out;
+	}
+	&:after {
+		content: "";
+		display: block;
+		border-bottom: $thickness solid currentColor;
+		width: 100%;
+		margin-bottom: 10px;
+		transition: transform 0.5s ease-in-out;
+		-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	}
+	&.open {
+		border-bottom: $thickness solid transparent;
+		transition: border-bottom 0.8s ease-in-out;
+		&:before {
+			transform: rotate(-405deg) translateY(2px) translateX(-3px);
+			transition: transform 0.5s ease-in-out;
+		}
+
+		&:after {
+			transform: rotate(405deg) translateY(-7px) translateX(-5px);
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+	.burger-active & {
+        color: rgb(5, 5, 5);
+		&.open {
+			border-bottom: $thickness solid transparent;
+			transition: border-bottom 0.8s ease-in-out;
+			&:before {
+				transform: rotate(-405deg) translateY(2px) translateX(-3px);
+				transition: transform 0.5s ease-in-out;
+			}
+	
+			&:after {
+				transform: rotate(405deg) translateY(-7px) translateX(-5px);
+				transition: transform 0.5s ease-in-out;
+			}
+		}
+	}
+}

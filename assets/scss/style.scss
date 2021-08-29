@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap');
+
+
+
+@import "./layouts/common";
+@import "./vendors/include-media";
+@import "./layouts/burger";
+@import "./layouts/header";
+@import "./base/variables";
+@import "./vendors/normalize";
+@import "./base/mixins";
+
+
+@import "./base/breakpoints";
+
+@import "./vendors/slick";
+
+
+@import "./base/forms";
+@import "./base/functions";
+@import "./base/helpers";
+
+
+@import "./components/slider";
+@import "./components/content";
+@import "./components/open-menu";
+
+
+
+
+
+
